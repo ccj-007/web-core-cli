@@ -16,11 +16,12 @@
     "chalk": "^4.1.2",
     "commander": "^9.3.0",
     "ejs": "^3.1.8",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.1.0",
     "inquirer": "^7.3.3",
     "ora": "^5.4.1"
   },
   "directories": {
     "lib": "lib"
-  },
-  "devDependencies": {}
+  }
 }
