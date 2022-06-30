@@ -1,25 +1,34 @@
 {
-  "name": "quna-h5cli",
+  "name": "web-core-cli",
   "version": "1.0.0",
-  "description": "h5 cli",
+  "description": "All-in-one scaffolding, cli integrated with Vue3 ecological chain, cli of H5 page, mock template cli of Node",
   "main": "./bin/cli.js",
   "bin": {
-    "quna-h5cli": "bin/cli.js"
+    "web-core-cli": "bin/cli.js"
   },
+  "keywords": [
+    "cli",
+    "allin",
+    "vue",
+    "template",
+    "h5",
+    "node"
+  ],
   "scripts": {
-    "cli": "node ./bin/cli.js",
-    "start": "quna-h5cli create testItem"
+    "cli": "node ./bin/cli.js"
   },
   "author": "chen",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^9.3.0",
+    "cross-spawn": "^7.0.3",
     "ejs": "^3.1.8",
     "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
     "inquirer": "^7.3.3",
-    "ora": "^5.4.1"
+    "ora": "^5.4.1",
+    "shelljs": "^0.8.5"
   },
   "directories": {
     "lib": "lib"
