@@ -1,11 +1,11 @@
- <template>
-     <div>{{ userStore.name }}</div>
-   </template>
-
  <script lang="ts" setup>
 import { useUserStore } from '@/store/user';
 
 const userStore = useUserStore();
-
-userStore.updateName('李四');
+userStore.updateName('登录界面');
 </script>
+    
+<template>
+  <div>{{ userStore.name }}</div>
+</template>
+

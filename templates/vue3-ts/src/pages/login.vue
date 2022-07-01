@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <button>我是login</button>
+  <usePinia></usePinia>
 </template>
 
 <style>

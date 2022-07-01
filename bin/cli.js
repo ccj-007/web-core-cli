@@ -1,37 +1,23 @@
 #! /usr/bin/env node
 const program = require('commander')
-const chalk = require('chalk')
-const ora = require('ora')
-const figlet = require('figlet');
+const log = require('../lib/log')
 
 //quan-h5cli create my-project
 program
   .on('--help', () => {
     // 新增说明信息
-    console.log('\r\n' + figlet.textSync('qunaH5', {
-      font: 'Ghost',
-      horizontalLayout: 'default',
-      verticalLayout: 'default',
-      width: 80,
-      whitespaceBreak: true
-    }));
+    log.outLOGO()
     // 新增说明信息
-    console.log(`\r\nRun ${chalk.cyan(`roc <command> --help`)} show details\r\n`)
+    log.outCyanLog(`Run  roc <command> --help show details`)
   })
   .version('0.1.0')
   .command('create <name>')
   .description('create a new project')
   .option('-f, --force', 'overwrite target directory if it exist')
   .action((name, options) => {
-    //转圈圈
-    const spinner = ora('Loading unicorns').start();
-    spinner.color = 'yellow';
-    spinner.text = 'Loading rainbows';
-
+    log.outLOGO()
     //开始流程
     require('../lib/create.js')(name, options)
-
-    spinner.stop()
   })
 
 

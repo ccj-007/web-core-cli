@@ -1,0 +1,41 @@
+html, body {
+  font-size: 16px;
+}
+
+#app {
+  background: rgb(216, 216, 216);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
+.nax-left {
+  width: 20%;
+}
+
+.nav-title {
+  width: 60%;
+}
+
+.nav-right {
+  width: 20%;
+}
+
+.back-icon {
+  width: 10px;
+  height: 20px;
+}
+
+.msg {
+  font-weight: bold;
+  font-size: 1rem;
+}
