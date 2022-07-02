@@ -8,12 +8,12 @@
     content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/index.css">
-  <script src="./js/lib/jquery.js"></script>
+  <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.min.css" />
+  <script src="./utils/flexible.js"></script>
 </head>
 
 <body>
-  <script src="./utils/flexible.js"></script>
-  <div id="app" class="flex-row-center">
+  <div id="app" class="flex-col-center">
     <div id="nav" class="flex">
       <div class="nax-left flex-row-center">
         <a href="./pages/home.html">
@@ -25,7 +25,19 @@
     </div>
     <div class='msg '>loading......</div>
   </div>
+
+  <script src="./js/lib/jquery.js"></script>
+  <script type="text/javascript" src="https://res.wx.qq.com/t/wx_fed/cdn_libs/res/weui/1.2.3/weui.min.js"></script>
+  <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+  <script>
+    var vConsole = new window.VConsole();
+  </script>
+  <script type="text/javascript" src="https://res.wx.qq.com/t/wx_fed/cdn_libs/res/weui/1.2.3/weui.min.js"></script>
+  <script type="text/javascript">
+    weui.alert('Welcome to H5');
+  </script>
   <script src="./js/index.js"></script>
+
 </body>
 
 </html>

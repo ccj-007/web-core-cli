@@ -25,6 +25,8 @@ web-core-cli create <projectname> //输入你的项目名
   3. js常见工具函数  
   4. jquery  
   5. flexible.js rem 布局方案  
+  6. 集成WeUI
+  7. vConsole打印调试
   
 ### node-mock
 
