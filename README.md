@@ -18,6 +18,7 @@ web-core-cli create <projectname> //输入你的项目名
   7. scss
   8. vueuse
   9. 代码规范 ESlint + prettier + commitlint + husky + lint-staged
+  10. 全局环境变量
 
 ### 创建H5
 
@@ -26,6 +27,8 @@ web-core-cli create <projectname> //输入你的项目名
   3. js常见工具函数  
   4. jquery  
   5. flexible.js rem 布局方案  
+  6. 集成WeUI
+  7. vConsole打印调试
   
 ### node-mock
 
