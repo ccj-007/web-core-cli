@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "description": "A vue h5 template with Vant UI",
   "author": "Sunnie <sunniejs@163.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
