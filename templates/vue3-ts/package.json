@@ -4,10 +4,24 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
+    "build": "vue-tsc --noEmit && vite build --mode production",
+    "build:dev": "vue-tsc --noEmit && vite build --mode development",
+    "build:test": "vue-tsc --noEmit && vite build --mode test",
+    "preview": "vite preview --port 8080",
     "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
-    "prettier": "prettier --write"
+    "prettier": "prettier --write",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run eslint",
+      "npm run prettier"
+    ]
   },
   "dependencies": {
     "@vueuse/core": "^8.7.5",
@@ -18,14 +32,22 @@
     "vue-router": "^4.0.16"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/node": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
     "@vitejs/plugin-vue": "^2.3.3",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.9.0",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.1.1",
+    "husky": "7.0.4",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "sass": "^1.53.0",
     "typescript": "^4.5.4",

@@ -4,6 +4,9 @@
       "node_modules/@types", // 默认值
       "src/types"
     ],
+    "types": [
+      "vite/client" //支持资源导入、环境变量、hot的类型定义
+    ],
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",

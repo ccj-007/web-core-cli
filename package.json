@@ -1,7 +1,6 @@
 {
   "name": "web-core-cli",
-  "version": "1.0.0",
-  "author": "Chase Chen",
+  "version": "1.0.1",
   "description": "All-in-one scaffolding, cli integrated with Vue3 ecological chain, cli of H5 page, mock template cli of Node",
   "main": "./bin/cli.js",
   "bin": {

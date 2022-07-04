@@ -17,6 +17,7 @@ web-core-cli create <projectname> //输入你的项目名
   6. 集成antd vue 按需加载无需import
   7. scss
   8. vueuse
+  9. 代码规范 ESlint + prettier + commitlint + husky + lint-staged
 
 ### 创建H5
 
