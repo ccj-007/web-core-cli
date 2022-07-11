@@ -4,6 +4,11 @@
       <h1 class="demo-home__title">
         <span> VUE H5开发模板</span>
       </h1>
+      <button @click="getData">axios调试</button>
+      <h1>请选择需要调试的页面:</h1>
+      <br />
+      <h1><a href="pack1.html">pack1</a><br /></h1>
+      <h1><a href="pack2.html">pack2</a><br /></h1>
       <h2 class="demo-home__desc">A vue h5 template with Vant UI</h2>
     </div>
     <van-cell icon="success"
@@ -14,6 +19,8 @@
 </template>
 
 <script>
+import { getTestData } from "@/api/user";
+import { log } from 'util';
 export default {
   data() {
     return {
@@ -43,35 +50,46 @@ export default {
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    async getData() {
+      let res = await getTestData({
+        "uid": "daf2b2394d8e434db1a3e40cbe0aa93e",
+        "did": "DE0FCADF-7293-4938-A3B4-267539728E9A",
+        "cid": "1",
+        "show": "zs",
+        "unlimited": true
+      })
+      console.log("getTestData",res)
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
 .index-container {
-  .warpper {
-    padding: 12px;
-    background: #fff;
-    .demo-home__title {
-      margin: 0 0 6px;
-      font-size: 32px;
-      .demo-home__title img,
-      .demo-home__title span {
-        display: inline-block;
-        vertical-align: middle;
-      }
-      img {
-        width: 32px;
-      }
-      span {
-        margin-left: 16px;
-        font-weight: 500;
-      }
+    .warpper {
+        padding: 12px;
+        background: #fff;
+        .demo-home__title {
+            margin: 0 0 6px;
+            font-size: 32px;
+            .demo-home__title img,
+            .demo-home__title span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img {
+                width: 32px;
+            }
+            span {
+                margin-left: 16px;
+                font-weight: 500;
+            }
+        }
+        .demo-home__desc {
+            margin: 0 0 20px;
+            color: rgba(69, 90, 100, 0.6);
+            font-size: 14px;
+        }
     }
-    .demo-home__desc {
-      margin: 0 0 20px;
-      color: rgba(69, 90, 100, 0.6);
-      font-size: 14px;
-    }
-  }
 }
 </style>

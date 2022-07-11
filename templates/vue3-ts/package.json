@@ -28,6 +28,7 @@
     "ant-design-vue": "^3.2.9",
     "axios": "^0.27.2",
     "pinia": "^2.0.14",
+    "vite-plugin-multiple-page": "^0.4.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.16"
   },

@@ -30,7 +30,7 @@ export default {
       getUserInfo(params)
         .then(() => {})
         .catch(() => {})
-    },
+    }
   }
 }
 </script>

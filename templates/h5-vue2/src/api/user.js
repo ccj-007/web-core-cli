@@ -3,8 +3,8 @@ import api from './index'
 import request from '@/utils/request'
 
 // 登录
-export function login(data) {
-  return request({
+export function login (data) {
+  return service({
     url: api.Login,
     method: 'post',
     data
@@ -12,7 +12,7 @@ export function login(data) {
 }
 
 // 用户信息 post 方法
-export function getUserInfo(data) {
+export function getUserInfo (data) {
   return request({
     url: api.UserInfo,
     method: 'post',
@@ -22,11 +22,22 @@ export function getUserInfo(data) {
 }
 
 // 用户名称 get 方法
-export function getUserName(params) {
+export function getUserName (params) {
   return request({
     url: api.UserName,
     method: 'get',
     params,
+    hideloading: true
+  })
+}
+
+
+// 测试数据
+export function getTestData (data) {
+  return request({
+    url: api.GiftCard,
+    method: 'post',
+    data,
     hideloading: true
   })
 }

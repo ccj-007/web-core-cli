@@ -9,6 +9,26 @@ const name = defaultSettings.title || 'vue mobile template'
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
 
 const { defineConfig } = require('@vue/cli-service')
+
+//配置分包
+let pages = {
+  index: { entry: 'src/main.js' },
+  pack1: { entry: 'packages/pack1/main.js' },
+  pack2: { entry: 'packages/pack2/main.js' }
+}
+
+let buildPage = {}
+let projectName = process.argv[3]
+if (projectName === 'all') {
+  buildPage = pages
+} else {
+  if (process.env.NODE_ENV === 'development') {
+    buildPage = pages
+  } else {
+    buildPage.index = pages[projectName]
+  }
+}
+
 // externals
 // const externals = {
 //   vue: 'Vue',
@@ -38,9 +58,9 @@ const { defineConfig } = require('@vue/cli-service')
 // }
 
 module.exports = defineConfig({
-  publicPath: './', // 署应用包时的基本 URL。 vue-router hash 模式使用
+  publicPath: './', // 署应用包时的 基本 URL。 vue-router hash 模式使用
   //  publicPath: '/app/', //署应用包时的基本 URL。  vue-router history模式使用
-  outputDir: 'dist', //  生产环境构建文件的目录
+  outputDir: 'dist/' + projectName, //  生产环境构建文件的目录
   assetsDir: 'static', //  outputDir的静态资源(js、css、img、fonts)目录
   lintOnSave: !IS_PROD,
   productionSourceMap: false, // 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建。
@@ -53,19 +73,20 @@ module.exports = defineConfig({
         warnings: false,
         errors: true
       }
+    },
+    proxy: {
+      //配置跨域
+      '/open-mission': {
+        target: "https://dev.zzss.com",
+        // ws:true,
+        changOrigin: true,
+        // pathRewrite: {
+        //   '^/api': '/'
+        // }
+      }
     }
-    // proxy: {
-    //   //配置跨域
-    //   '/api': {
-    //       target: "https://test.xxx.com",
-    //       // ws:true,
-    //       changOrigin:true,
-    //       pathRewrite:{
-    //           '^/api':'/'
-    //       }
-    //   }
-    // }
   },
+  pages: { ...buildPage },
   css: {
     extract: IS_PROD, // 是否将组件中的 CSS 提取至一个独立的 CSS 文件中 (而不是动态注入到 JavaScript 中的 inline 代码)。
     sourceMap: false,
@@ -83,14 +104,12 @@ module.exports = defineConfig({
   },
   configureWebpack: config => {
     config.name = name
-
     // 为生产环境修改配置...
     // if (IS_PROD) {
     //   // externals
     //   config.externals = externals
     // }
   },
-
   chainWebpack: config => {
     config.plugins.delete('preload') // TODO: need test
     config.plugins.delete('prefetch') // TODO: need test

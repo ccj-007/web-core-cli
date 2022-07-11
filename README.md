@@ -2,6 +2,8 @@
 
 ```sh
 
+npm i pnpm -g   //默认需要安装pnpm
+
 npm i web-core-cli -g
 
 web-core-cli create <projectname> //输入你的项目名
@@ -25,23 +27,14 @@ web-core-cli create <projectname> //输入你的项目名
 
 ### 📲 创建Vue2模板(H5移动端)
 
-  1. Vue-cli4
+  1. Vue@2.6 + vue-cli@5.0.0 + vue-router@3.5.1 + vuex@3.6.2
   2. 配置多环境变量
   3. VantUI 组件按需加载  
   4. Sass 全局样式
-  5. Webpack 4
-  6. Vuex 状态管理
+  5. vue.config.js 基础配置
   7. Axios 封装及接口管理
-  8. Vue-router
-  9. Webpack 4 vue.config.js 基础配置
-  10. 配置 proxy 跨域
-  11. 配置 alias 别名
-  12. 配置 打包分析
-  13. 配置 externals 引入 cdn 资源
-  14. 去掉 console.log
-  15. splitChunks 单独打包第三方模块
-  16. 添加 IE 兼容
-  17. Eslint+Pettier 统一开发规范
+  8. Eslint+Pettier 统一开发规范
+  9. 支持分包
 
 ### 📝创建H5
 
