@@ -2,7 +2,6 @@
 const program = require('commander')
 const log = require('../lib/log')
 
-//quan-h5cli create my-project
 program
   .on('--help', () => {
     // 新增说明信息

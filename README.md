@@ -1,3 +1,10 @@
+![web-core-cli](./logo.png)
+
+- 建议先看看掘金文章  
+
+[10分钟快速搭个多合一脚手架web-core-cli，支持Vue3、H5、node模板](https://juejin.cn/post/7121268498956812324)
+
+
 ## 😏**快速使用**
 
 ```sh
