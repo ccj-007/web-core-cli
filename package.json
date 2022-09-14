@@ -1,36 +1,36 @@
 {
-  "name": "web-core-cli",
-  "version": "1.0.3",
-  "description": "All-in-one scaffolding, cli integrated with Vue3 ecological chain, cli of H5 page, mock template cli of Node",
-  "main": "./bin/cli.js",
-  "bin": {
-    "web-core-cli": "bin/cli.js"
-  },
-  "keywords": [
-    "cli",
-    "allin",
-    "vue",
-    "template",
-    "h5",
-    "node"
-  ],
-  "scripts": {
-    "cli": "node ./bin/cli.js"
-  },
-  "author": "chen",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "commander": "^9.3.0",
-    "cross-spawn": "^7.0.3",
-    "ejs": "^3.1.8",
-    "figlet": "^1.5.2",
-    "fs-extra": "^10.1.0",
-    "inquirer": "^7.3.3",
-    "ora": "^5.4.1",
-    "shelljs": "^0.8.5"
-  },
-  "directories": {
-    "lib": "lib"
-  }
+	"name": "web-core-cli",
+	"version": "1.0.3",
+	"description": "All-in-one scaffolding, cli integrated with Vue3 ecological chain, cli of H5 page, mock template cli of Node",
+	"main": "./bin/cli.js",
+	"bin": {
+		"web-core-cli": "bin/cli.js"
+	},
+	"keywords": [
+		"cli",
+		"allin",
+		"vue",
+		"template",
+		"h5",
+		"node"
+	],
+	"scripts": {
+		"cli": "node ./bin/cli.js"
+	},
+	"author": "chen",
+	"license": "ISC",
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"commander": "^9.3.0",
+		"cross-spawn": "^7.0.3",
+		"ejs": "^3.1.8",
+		"figlet": "^1.5.2",
+		"fs-extra": "^10.1.0",
+		"inquirer": "^7.3.3",
+		"ora": "^5.4.1",
+		"shelljs": "^0.8.5"
+	},
+	"directories": {
+		"lib": "lib"
+	}
 }
