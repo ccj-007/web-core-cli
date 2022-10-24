@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/style/**',
-    './src/pages/**',
-    './src/components/**',
+    './src/**/*.vue',
   ],
   theme: {
+    fontSize: {
+      16: ['16px', '22px'],
+      'bg-gray': '#333333'
+    },
     extend: {},
   },
   plugins: [],

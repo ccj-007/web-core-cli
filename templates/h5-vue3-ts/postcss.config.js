@@ -1,5 +1,6 @@
 // postcss.config.cjs
 const autoprefixer = require('autoprefixer');
+const tailwindcss = require('tailwindcss');
 const px2viewport = require('postcss-px-to-viewport-8-plugin');
 
 const basePx2viewport = {
@@ -24,6 +25,7 @@ const basePx2viewport = {
 
 module.exports = {
   plugins: [
+    tailwindcss(),
     autoprefixer(),
     // vant
     px2viewport({
@@ -35,7 +37,7 @@ module.exports = {
     // 非vant
     px2viewport({
       ...basePx2viewport,
-      viewportWidth: 750,
+      viewportWidth: 375,
       exclude: [/node_modules\/vant/],
     }),
   ],
